@@ -6,6 +6,7 @@ import os
 import secrets
 import tempfile
 import threading
+import time
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -63,13 +64,32 @@ def collect_to_target(target):
     def progress(message):
         with lock:
             state["status"] = message
-    with app.db(str(DB_PATH)) as conn:
-        remaining = max(0, target - conn.execute("SELECT COUNT(*) FROM users").fetchone()[0])
-        if remaining:
-            app.collect(conn, remaining, app.default_github_token(), progress)
-        total = conn.execute("SELECT COUNT(*) FROM users").fetchone()[0]
-    set_collection_job(target, False)
-    return f"Collection finished with {total} saved users."
+    failures = 0
+    while True:
+        with app.db(str(DB_PATH)) as conn:
+            before = conn.execute("SELECT COUNT(*) FROM users").fetchone()[0]
+            remaining = max(0, target - before)
+            if not remaining:
+                set_collection_job(target, False)
+                return f"Collection finished with {before} saved users."
+            try:
+                app.collect(conn, remaining, app.default_github_token(), progress)
+            except RuntimeError as exc:
+                if not (str(exc).startswith("GitHub network error") or
+                        str(exc).startswith("GitHub rate limit")):
+                    raise
+                failures += 1
+                delay = min(30 * (2 ** min(failures - 1, 3)), 240)
+                message = f"GitHub connection failed; retrying in {delay}s: {exc}"
+                progress(message)
+                print(message, flush=True)
+                time.sleep(delay)
+                continue
+            after = conn.execute("SELECT COUNT(*) FROM users").fetchone()[0]
+        failures = 0
+        if after <= before:
+            set_collection_job(target, False)
+            return f"Collection stopped at {after}: no more matching profiles were found."
 
 
 def start_job(fn):

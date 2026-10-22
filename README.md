@@ -8,6 +8,8 @@ Requires Python 3.9+ and `curl`. No Python packages are required.
 
 Run `./start_project.sh` to start the local interface in your browser at `http://127.0.0.1:8765`. On macOS, the server runs as a user LaunchAgent independently of the terminal and writes errors to `logs/project.log`. Use `./stop_project.sh` to stop it. If the server exits during a collection, the service restarts it and resumes toward 500 saved users. The **Profiles** section shows stored users in a table with email, website, social links, and consent status, 25 users per page with Previous and Next buttons. Use **Collect 500 users** and **Export CSV**. The GitHub token field can be left blank when `GITHUB_TOKEN` is set in the environment or in the ignored local `local_config.py` file. The page also has buttons to record verified consent, preview eligible email recipients, and send through Gmail SMTP. Gmail credentials entered on the page are held in memory for that operation and are not saved to the project.
 
+If GitHub's connection times out, collection waits and retries automatically. Profiles already saved in SQLite are retained and skipped on the next pass.
+
 ```sh
 export GITHUB_TOKEN='your-read-only-token'
 python3 github_florida.py collect --count 500
