@@ -11,6 +11,9 @@ rm -f "$HOME/Library/LaunchAgents/$LABEL.plist"
 python3 - "$PROJECT_DIR" <<'PY'
 import sys
 sys.path.insert(0, sys.argv[1])
-import gui
-gui.set_collection_job(500, False)
+import github_florida as app
+from pathlib import Path
+with app.db(str(Path(sys.argv[1]) / 'github_users.sqlite3')) as conn:
+    conn.execute('UPDATE collection_job SET active=0 WHERE id=1')
+    conn.commit()
 PY

@@ -1,0 +1,38 @@
+[
+  {
+    "number": 1,
+    "name": "Professional Introduction",
+    "subject": "Development Partnership Opportunity with Our Software Team",
+    "body": "Hi {recipient_name},\n\nI came across your GitHub projects and was deeply impressed by the work you’ve shared.\n\nI hope you’re doing well.\n\nI’m Wong, reaching out on behalf of our software development team. Our team has experience delivering web applications and working across React, Next.js, Vue.js, Node.js, Python, cloud technologies, and SQL/NoSQL databases.\n\nWe’re interested in collaborating with US-based developers on remote software projects. Our team can take responsibility for architecture, development, testing, and ongoing technical support, while a partner may contribute client relationships, communication, or project coordination.\n\nWe propose a 50% partner share of project revenue, with responsibilities and project terms agreed in advance.\n\nWould you be available for a brief conversation about how we could work together?\n\nBest regards,\nWong\nEmail: {from_email}"
+  },
+  {
+    "number": 2,
+    "name": "Short Cold Email",
+    "subject": "Open to a Software Development Team Partnership?",
+    "body": "Hi {recipient_name},\n\nI came across your GitHub projects and was deeply impressed by the work you’ve shared.\n\nI’m Wong, representing a full-stack software development team experienced in React, Next.js, Node.js, Python, databases, and cloud infrastructure.\n\nWe’re looking for a US-based developer or consultant to partner with on remote projects. Our team can deliver the technical work, while you could contribute referrals, client communication, or project management.\n\nWe propose a transparent 50% partner share of project revenue, with responsibilities agreed in advance.\n\nWould you be open to a quick introductory call?\n\nBest,\nWong\nEmail: {from_email}"
+  },
+  {
+    "number": 3,
+    "name": "Friendly Networking",
+    "subject": "Interested in Partnering with Our Development Team?",
+    "body": "Hi {recipient_name},\n\nI came across your GitHub projects and was deeply impressed by the work you’ve shared.\n\nHope you’re doing well!\n\nI’m Wong, and I work with a team of developers who build full-stack web apps using technologies such as React, Next.js, Node.js, Python, and AWS.\n\nWe’re hoping to connect with a US-based developer who’d enjoy collaborating on remote software projects. Our team can focus on technical delivery, and together we could handle project discovery, client communication, and planning.\n\nWe propose a 50% partner share of project revenue, with responsibilities agreed upfront so the collaboration works well for everyone.\n\nDoes this sound interesting? I’d love to hear your thoughts.\n\nCheers,\nWong\nEmail: {from_email}"
+  },
+  {
+    "number": 4,
+    "name": "Freelance And Agency Collaboration",
+    "subject": "Freelance Project Collaboration with Our Development Team",
+    "body": "Hi {recipient_name},\n\nI came across your GitHub projects and was deeply impressed by the work you’ve shared.\n\nMy name is Wong, and I represent a software development team with experience in frontend, backend, database, and cloud-based projects.\n\nWe’re looking to partner with US-based freelancers and agency owners on suitable projects through approved team or agency arrangements on Upwork, Freelancer.com, or through direct client contracts.\n\nOur team can help with technical estimates, application development, testing, and support. A partner could help with lead generation, client calls, requirements gathering, or project coordination.\n\nWe propose a 50% partner share of project revenue and clear client-approved delivery arrangements.\n\nWould you be interested in exploring a partnership?\n\nBest regards,\nWong\nEmail: {from_email}"
+  },
+  {
+    "number": 5,
+    "name": "Long-Term Business Partnership",
+    "subject": "Seeking a Long-Term US Partner for Our Software Development Team",
+    "body": "Hi {recipient_name},\n\nI came across your GitHub projects and was deeply impressed by the work you’ve shared.\n\nI hope you’re having a great week.\n\nI’m Wong, representing a software engineering team with collective experience in building, maintaining, and supporting modern web applications.\n\nOur team covers frontend technologies such as React, Next.js, Vue.js, and Angular; backend development with Node.js, Python, and C#; databases including PostgreSQL, MySQL, and MongoDB; and cloud/deployment tools such as AWS, Azure, GCP, and Docker.\n\nWe’d like to work with a US-based developer, consultant, or agency on projects where our engineering capacity complements your client relationships, business development, or project-management experience.\n\nOur team can support solution design, feature development, integrations, bug fixing, testing, and maintenance. We would clearly agree on who owns each responsibility and communicate transparently with clients.\n\nWe propose a long-term arrangement with a 50% partner share of project revenue and clearly agreed responsibilities.\n\nWould you be interested in a short call to discuss possible ways to collaborate?\n\nKind regards,\nWong\nEmail: {from_email}"
+  },
+  {
+    "number": 6,
+    "name": "Polite Follow-Up",
+    "subject": "Following Up — Collaboration with Our Development Team",
+    "body": "Hi {recipient_name},\n\nI came across your GitHub projects and was deeply impressed by the work you’ve shared.\n\nI wanted to follow up on my earlier note about a possible partnership with our software development team.\n\nOur team is available to contribute full-stack development, testing, cloud deployment, and technical support to suitable remote projects. We’re interested in teaming up with a US-based partner who can bring complementary client, communication, or project-management expertise.\n\nWe propose a 50% partner share of project revenue, with responsibilities agreed in advance. If the idea is relevant, I’d be happy to share more about our team’s skills and discuss a practical collaboration model.\n\nWould a brief introductory call make sense?\n\nBest,\nWong\nEmail: {from_email}"
+  }
+]

@@ -5,7 +5,9 @@
 *.sqlite3-shm
 __pycache__/
 .env
+.env.*
 local_config.py
 *.csv
 logs/
 .project.pid
+.email_queue.lock
